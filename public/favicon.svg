@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Helix">
+  <rect width="32" height="32" rx="8" fill="#0B0C0F"/>
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" stroke="#262A33" stroke-width="1.5"/>
+  <!-- Twin strands: a geometric H that stays a single glyph at 16px -->
+  <rect x="8" y="7" width="5.5" height="18" rx="1.5" fill="#F2F2F0"/>
+  <rect x="18.5" y="7" width="5.5" height="18" rx="1.5" fill="#F2F2F0"/>
+  <!-- One helix-twisted rung — two rungs read as # at 16px -->
+  <path d="M11 13.2 L21 11.8 L21 16.4 L11 17.8 Z" fill="#9AA6B8"/>
+</svg>

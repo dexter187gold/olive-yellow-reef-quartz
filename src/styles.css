@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-background: #0b0c0f;
+  --color-foreground: #f2f2f0;
+  --color-card: #12141a;
+  --color-card-foreground: #f2f2f0;
+  --color-muted: #1a1d25;
+  --color-muted-foreground: #8d929c;
+  --color-popover: #161920;
+  --color-popover-foreground: #f2f2f0;
+  --color-border: #262a33;
+  --color-input: #262a33;
+  --color-primary: #d7dbe3;
+  --color-primary-foreground: #0b0c0f;
+  --color-secondary: #1c2028;
+  --color-secondary-foreground: #e4e6ea;
+  --color-accent: #22262f;
+  --color-accent-foreground: #e8eaee;
+  --color-destructive: #c97a74;
+  --color-ring: #9aa6b8;
+  --color-whatsapp: #6ea886;
+  --color-facebook: #7b93c4;
+  --color-email: #c4a574;
+  --color-web: #8aa0b8;
+  --color-portal: #9aa6b8;
+  --color-open: #7eb8d4;
+  --color-pending: #c4a574;
+  --color-waiting: #8b90c9;
+  --color-resolved: #7a9e86;
+  --color-closed: #6a6f7a;
+  --color-urgent: #d17a72;
+  --color-high: #d4a07a;
+  --color-medium: #c4b07a;
+  --color-low: #7a9e86;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  --shadow-soft: 0 18px 50px -24px rgb(0 0 0 / 0.65);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 28%, transparent);
+    color: var(--color-foreground);
+  }
+
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
